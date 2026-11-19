@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ko Vault 隱私政策 | Chidi International Limited</title>
+<meta name="description" content="了解 Ko Vault 如何在裝置本機保存及加密保險箱資料，以及備份、刪除和選用第三方服務的資料處理方式。">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="https://yonyva.com/kovault/privacy/zh-tw/">
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="/">Ko Vault</a></nav></div></header>
+<main class="wrap policy">
+<nav aria-label="政策語言"><a href="/kovault/privacy/">简体中文</a> · <a href="/kovault/privacy/en/">English</a> · <a href="/kovault/privacy/zh-tw/" lang="zh-TW" aria-current="page">繁體中文</a></nav>
+<h1>Ko Vault 隱私政策</h1>
+<p>生效及最後更新日期：2026 年 11 月 19 日。Chidi International Limited 提供 Ko Vault Android 應用程式（套件名稱 <code>com.chidi.kovault</code>）。如有隱私問題，請聯絡 <a href="mailto:chidi@88.com">chidi@88.com</a>。</p>
+<div class="note"><p><strong>簡要說明：</strong>保險箱資料保存在你的裝置本機並經過加密。Ko Vault 不提供開發者雲端帳號或伺服器同步。選用的匯率更新、支持開發者及訂單查詢會連接相應第三方服務。本地 Wi-Fi 換機會將受密碼保護的加密備份傳送到你選擇的裝置。</p></div>
+
+<section>
+<h2>1. 裝置本機保存的內容</h2>
+<p>你加入 Ko Vault 的檔案、卡證資料與附件、帳戶與交易、筆記、密碼及照片，會保存在裝置上的應用程式私人儲存空間。保險箱資料使用 AES-256-GCM 加密，金鑰由 Android Keystore 保護。應用程式不會將保險箱內容同步至 Ko Vault 帳號或開發者營運的伺服器，因此我們無法透過伺服器副本恢復本機內容。</p>
+</section>
+
+<section>
+<h2>2. PIN、權限與裝置存取</h2>
+<p>本機 PIN 用於控制應用程式存取，並不是保險箱內容的加密金鑰。選用的生物辨識驗證由 Android 處理；應用程式不會接收指紋或臉部範本。可用功能會受裝置能力、Android 設定及你授予的權限影響。</p>
+<p>匯入檔案及選擇備份目的地時，你會透過 Android 系統選擇器指定內容或位置。相機用於掃描裝置遷移 QR 碼。附近 Wi-Fi 權限用於尋找及連接裝置；較舊 Android 版本可能需要定位權限才能使用 Wi-Fi 功能。這些功能不會用來建立位置紀錄。</p>
+<p>檔案庫可保存你選取的 APK。當你主動開啟 APK 時，Ko Vault 會透過唯讀 content URI 將檔案交給 Android。任何未知來源安裝權限及最終安裝確認均由 Android 安裝程式處理。應用程式不會靜默安裝套件，也不會自行下載更新安裝檔。</p>
+</section>
+
+<section>
+<h2>3. 網路活動與第三方服務</h2>
+<p><strong>手動更新匯率。</strong>只有當你點選更新時，應用程式才會預設透過 HTTPS 向 ExchangeRate-API 的 <code>open.er-api.com</code> 請求匯率。你也可以自行設定其他 HTTPS API。請求不會包含保險箱內的交易、密碼、檔案或照片。服務提供者可能收到請求及 IP 位址等網路資訊。預設的開放端點會依 IP 位址進行流量限制；若 IP 收到 HTTP 429 回應，服務文件說明約 20 分鐘後會解除該次限制。這是流量限制解除時間，不代表請求紀錄只保留 20 分鐘。其他資料保留及刪除方式依服務提供者的條款與隱私政策處理。請參閱 <a href="https://www.exchangerate-api.com/terms">ExchangeRate-API 條款及隱私資訊</a>。若你設定其他供應商，則適用該供應商自己的隱私規則。</p>
+<p><strong>支持開發者與查詢訂單。</strong>只有當你主動選擇支持開發者或查詢訂單時，應用程式才會連接 Google Play Billing，以查詢商品、取得購買狀態及購買權杖，並提交消費確認。支持是可重複購買的自願單次付款，不是訂閱，也不會解鎖額外功能、會員或徽章。應用程式不會讀取你的付款卡號。為了協助恢復中斷的付款流程，應用程式只會在本機保存一個「曾嘗試支持」的布林標記，不會在偏好設定中保存購買權杖。應用程式啟動或返回前景時不會自動開始 Billing 查詢。Google Play Billing Library 可能向 Google 傳送付款流程的技術診斷資料；依據程式庫版本及操作，資料可能包括請求結果、錯誤及耗時、應用程式套件名稱與版本、Billing Library 版本、隨機工作階段識別碼，以及裝置型號、Android 版本、語言、時區和網路類型等環境資訊。連線時 Google 也會收到 IP 位址等網路資訊。這些診斷資料用於 Google Play Billing 的運作及疑難排解，不包含你的保險箱檔案、密碼或照片。我們可能透過 Play Console 查看銷售、退款及結算紀錄，以處理訂單問題、核對收入及履行適用的會計或稅務責任。Google 依其政策處理交易與診斷紀錄。我們無法代你刪除 Google 帳戶內的交易紀錄或 Google 的 Billing 診斷紀錄，應用程式亦沒有統一刪除第三方服務紀錄的功能。請參閱 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>。</p>
+<p><strong>本地 Wi-Fi 換機。</strong>當你主動開始傳輸時，Ko Vault 會建立受密碼保護的加密備份，並透過本地 Wi-Fi 傳送到你選擇的裝置。備份內容本身是加密的；連線權杖、檔案大小及接收確認等協定中繼資料並未受到 HTTPS/TLS 保護。請勿假設本地連線的每一部分都與加密備份受到相同方式的保護。請只使用你信任的裝置和網路。</p>
+<p>匯率請求使用 HTTPS，Google Play Billing 則使用 Google 的付款連線。你可以不更新匯率、不支持開發者，也不查詢訂單，繼續使用本機保險箱功能。目前應用程式不顯示廣告，也沒有開發者營運的雲端保險箱同步服務。網站及隱私政策連結會交由瀏覽器開啟；網站主機與瀏覽器可能處理完成網路請求所需的資訊。本機保存不代表應用程式永遠不會連線網路。</p>
+</section>
+
+<section>
+<h2>4. 備份、保留與刪除</h2>
+<p>你在應用程式內刪除的項目會移至資源回收筒，保留 7 天供你還原。超過期限後，項目會到期，並在應用程式執行清理時移除。你也可以提前永久刪除。你可以透過應用程式管理本機內容，或在 Android 設定中清除應用程式資料。清除資料或解除安裝應用程式可能會永久移除本機內容。</p>
+<p>Android 自動應用程式備份已停用。是否建立外部備份、儲存位置、是否複製或分享，以及何時刪除，均由你決定。Ko Vault 建立的備份受密碼保護並經過加密。你在應用程式內刪除內容或解除安裝後，已匯出的備份及其他副本仍可能存在，請在其儲存位置另行刪除。</p>
+<p>如果你將備份儲存或上傳至自行選擇的雲端硬碟、NAS 或其他儲存服務，該服務會依照自身條款及隱私政策處理副本。請妥善保管裝置、備份密碼及備份檔案。若沒有可用備份，裝置遺失、清除應用程式資料或解除安裝造成的本機內容遺失可能無法恢復。</p>
+<p>第三方技術或付款服務所持有紀錄的保留及刪除，由相關服務提供者及適用規定決定。若要查詢或要求刪除該服務持有的紀錄，請聯絡相關服務提供者。</p>
+</section>
+
+<section>
+<h2>5. 分享、剪貼簿與桌面小工具</h2>
+<p>當你選擇匯出、分享或使用其他應用程式開啟內容時，所選接收方或應用程式會取得你選擇的內容。部分匯出格式可能未經加密。複製到剪貼簿的文字及顯示於主畫面小工具的資訊，可能在保險箱保護範圍之外被存取。分享前請確認接收方及內容。第三方應用程式、儲存服務及接收方會依照各自規則處理收到的資訊。</p>
+</section>
+
+<section>
+<h2>6. 你聯絡我們時提供的資訊</h2>
+<p>如果你寄送電子郵件給我們，我們會收到你的電子郵件地址、訊息內容及你選擇附上的檔案，並用於回覆你的請求。請勿傳送保險箱 PIN、帳戶密碼或不必要的敏感檔案。你的電子郵件服務提供者可能會處理傳送及儲存郵件所需的資訊。你可以聯絡我們，查詢或要求刪除我們透過電子郵件收到的資訊。只保存在你裝置上的保險箱內容，請在該裝置上自行管理。</p>
+</section>
+
+<section>
+<h2>7. 政策更新</h2>
+<p>如果應用程式功能或資料處理方式有所變更，我們會更新本頁及最後更新日期。使用相關功能前，請查看當時適用的政策。</p>
+</section>
+
+<section>
+<h2>8. 隱私聯絡方式</h2>
+<p>公司：<strong>Chidi International Limited</strong><br>應用程式：Ko Vault<br>套件名稱：<code>com.chidi.kovault</code><br>電子郵件：<a href="mailto:chidi@88.com">chidi@88.com</a><br>網站：<a href="https://yonyva.com">yonyva.com</a></p>
+</section>
+</main>
+<footer><div class="wrap"><a href="/">Ko Vault</a> · <a href="mailto:chidi@88.com">chidi@88.com</a></div></footer>
+</body>
+</html>
